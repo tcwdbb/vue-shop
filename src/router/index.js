@@ -27,5 +27,14 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
+//用户没有登录需要跳转到登录页面
+router.beforeEach((to, from, next) => {
+  if(to.path === '/login') return next()
+  const token = window.sessionStorage.getItem('token');
+  if(!token) {
+    return next('/login');
+  }
+  next();
+})
 
 export default router

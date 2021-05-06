@@ -1,15 +1,20 @@
 <template>
   <div class="home">
-    首页
+    <el-button @click="exit">退出</el-button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
-}
+  name: "Home",
+  methods: {
+    exit() {
+      window.sessionStorage.clear();
+      this.$router.push("/login");
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>
-
 </style>
