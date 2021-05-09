@@ -31,3 +31,13 @@ export function removeUserById(id) {
     method: 'delete'
   })
 }
+//分配用户角色
+export function setUserRoole(id, rid) {
+  return request({
+    url: `users/${id}/role`,
+    method: 'put',
+    data: {
+      rid
+    }
+  })
+}
