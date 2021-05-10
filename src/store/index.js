@@ -26,7 +26,19 @@ const state = {
   //给用户分配角色对话框的显示与否
   setRoleDialogVisible: false,
   //用户信息
-  userInfo: {}
+  userInfo: {},
+  //分类列表查询参数
+  querInfo: {
+    type: 3,
+    pagenum: 1,
+    pagesize: 5
+  },
+  //分类列表数据
+  categoriesList: [],
+  //分类总数据条数
+  total: 0,
+  //保存添加分类数据
+  addCateForm: {}
 }
 
 export default new Vuex.Store({

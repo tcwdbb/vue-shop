@@ -21,5 +21,21 @@ export default {
   //获取用户信息
   getUserInfo(state) {
     return state.userInfo;
+  },
+  //获取分类列表查询参数
+  getCategoryListQuerInfo(state) {
+    return state.querInfo;
+  },
+  //获取分类列表数据
+  getCategoryList(state) {
+    return state.categoriesList;
+  },
+  //获取分类列表总条数
+  getTotal(state) {
+    return state.total;
+  },
+  //获取要添加的分类数据
+  getAddCateForm(state) {
+    return state.addCateForm;
   }
 }

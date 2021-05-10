@@ -41,7 +41,6 @@ export default {
   async created() {
     const res = await getMenus();
     this.menusList = res.data;
-    console.log(this.menusList);
   },
   methods: {
     ...mapMutations(["setBreadcrumb"]),

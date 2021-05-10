@@ -39,6 +39,20 @@ export default {
   //更改state中userInfo数据
   setUserInfo(state, payload) {
     state.userInfo = payload
+  },
+
+  //设置state中商品分类数据
+  setCategoriesList(state, [data,total]) {
+    state.categoriesList = data;
+    state.total = total;
+  },
+  //设置查询参数
+  setQuerInfo(state, payLoad) {
+    state.querInfo = payLoad
+  },
+  //保存添加分类数据
+  setAddCateForm(state, payLoad){
+    state.addCateForm = payLoad
   }
 }
 
