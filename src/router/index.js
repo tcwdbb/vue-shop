@@ -11,7 +11,7 @@ const Goods = () => import ('components/goods/Goods.vue');
 const Reports = () => import ('components/report/Reports.vue');
 const Roles = () => import ('components/role/Roles.vue')
 const Categories = () => import ('components/goods/categories/Categories.vue')
-const Params = () => import ('components/params/Params.vue')
+const Params = () => import ('components/goods/params/Params.vue')
 
 Vue.use(VueRouter)
 
