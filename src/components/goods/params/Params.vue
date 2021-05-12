@@ -186,6 +186,7 @@
 <script>
 import Breadcrumb from "../../breadcrumb/Breadcrumb.vue";
 import CardBox from "../../card/CardBox.vue";
+import { goodsCategoryMixin } from 'common/mixin.js'
 
 import {
   getParamsList,
@@ -193,27 +194,28 @@ import {
   removeParams,
   editParamsItem
 } from "network/goods/params.js";
-import { getGoodsCategoryList } from "network/goods/categories.js";
+
 import ParamsDialog from "./ParamsDialog.vue";
 import EditParamsDialog from "./EditParamsDialog.vue";
 
 export default {
   components: { CardBox, Breadcrumb, ParamsDialog, EditParamsDialog },
+  mixins: [goodsCategoryMixin],
   name: "params",
   data() {
     return {
       //联级选择框双向绑定到的数组
       selectedKeys: [],
       //商品分类列表
-      categoryList: [],
+      // categoryList: [],
       //被激活的页签的名称
       activeName: "many",
       //上一次被激活的页签名称
       oldActiveName: "",
       //动态参数的数据
-      manyTableData: [],
+      // manyTableData: [],
       //静态属性的数据
-      onlyTableData: [],
+      // onlyTableData: [],
       //添加对话框的显示与否
       dialogVisible: false,
       //修改参数对话框的显示与否
@@ -252,13 +254,13 @@ export default {
         this.onlyTableData = [];
     },
     //获取分类列表
-    async getGoodsCategoryList() {
-      const res = await getGoodsCategoryList({ type: 3 });
-      if (res.meta.status !== 200) {
-        return this.$message.error("获取分类列表失败");
-      }
-      this.categoryList = res.data;
-    },
+    // async getGoodsCategoryList() {
+    //   const res = await getGoodsCategoryList({ type: 3 });
+    //   if (res.meta.status !== 200) {
+    //     return this.$message.error("获取分类列表失败");
+    //   }
+    //   this.categoryList = res.data;
+    // },
     //面板点击切换的时候请求参数列表
     handleTabClick() {
       //如果一直点击同一个选项不重复发送请求，或者cateId为空时也不发送请求

@@ -38,7 +38,17 @@ const state = {
   //分类总数据条数
   total: 0,
   //保存添加分类数据
-  addCateForm: {}
+  addCateForm: {},
+  //商品列表查询参数
+  goodsQueryInfo: {
+    query: '',
+    pagenum: 1,
+    pagesize: 5
+  },
+  //商品列表数据
+  goodsList: [],
+  //商品数据总条数
+  goodsTotal: 0
 }
 
 export default new Vuex.Store({

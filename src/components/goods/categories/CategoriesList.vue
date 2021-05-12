@@ -128,7 +128,6 @@ export default {
     getCategoryList: {
       deep: true,
       handler(val) {
-        console.log(123123);
         this.getCategory = val;
         //数据改变之后页面没有发生刷新，手动强制刷新
         this.$forceUpdate();

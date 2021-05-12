@@ -37,5 +37,18 @@ export default {
   //获取要添加的分类数据
   getAddCateForm(state) {
     return state.addCateForm;
+  },
+
+  //获取商品列表查询参数
+  getGoodsQueryInfo(state) {
+    return state.goodsQueryInfo;
+  },
+  //获取商品列表数据
+  getterGoodsList(state) {
+    return state.goodsList;
+  },
+  //获取商品总条数
+  getterGoodsTotal(state) {
+    return state.goodsTotal;
   }
 }

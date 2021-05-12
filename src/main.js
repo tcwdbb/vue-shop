@@ -7,7 +7,6 @@ import 'assets/css/globle.css'
 import 'assets/icon/iconfont.css'
 
 
-
 Vue.config.productionTip = false
 Vue.prototype.$bus = new Vue();
 new Vue({

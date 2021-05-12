@@ -53,6 +53,19 @@ export default {
   //保存添加分类数据
   setAddCateForm(state, payLoad){
     state.addCateForm = payLoad
+  },
+
+  //改变商品列表请求参数
+  setGoodsQueryInfo(state, payload) {
+    state.goodsQueryInfo = payload
+  },
+  //设置商品列表数据
+  setGoodsList(state, payload) {
+    state.goodsList = payload
+  },
+  //设置商品总条数
+  setGoodsTotal(state, payload) {
+    state.goodsTotal = payload
   }
 }
 

@@ -8,7 +8,7 @@
       :collapse = "isShow"
       :collapse-transition="false"
       :router="true"
-      :default-active="$route.path"
+      :default-active="$route.path === '/goods/add' ? '/goods' : $route.path"
     >
     <div class="toggle-button" @click="toggleCollapse">|||</div>
       <!-- 一级菜单 -->

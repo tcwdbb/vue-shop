@@ -1,5 +1,5 @@
 import { getUserList } from "network/home.js";
-
+import { getGoodsCategoryList } from "network/goods/categories.js";
 //获取用户列表
 export const getUserListMixin = {
   data() {
@@ -68,6 +68,30 @@ export const proofRulesMixin = {
       }
       return callback(new Error('手机号不正确'))
     }
+  }
+}
+
+//商品分类三级联动菜单数据
+export const goodsCategoryMixin = {
+  data() {
+    return {
+      //商品分类列表
+      categoryList: [],
+      //动态参数的数据
+      manyTableData: [],
+      //静态属性的数据
+      onlyTableData: [],
+    }
+  },
+  methods: {
+    //获取分类列表
+    async getGoodsCategoryList() {
+      const res = await getGoodsCategoryList({ type: 3 });
+      if (res.meta.status !== 200) {
+        return this.$message.error("获取分类列表失败");
+      }
+      this.categoryList = res.data;
+    },
   }
 }
 
