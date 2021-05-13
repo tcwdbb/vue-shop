@@ -66,6 +66,19 @@ export default {
   //设置商品总条数
   setGoodsTotal(state, payload) {
     state.goodsTotal = payload
+  },
+
+  //改变订单列表查询参数
+  setOrderQueryInfo(state, payload) {
+    state.orderQueryInfo = payload
+  },
+  //改变订单列表数据
+  setOrderList(state, payload) {
+    state.orderList = payload
+  },
+  //设置订单总条数
+  setOrderTotal(state, payload) {
+    state.orderTotal = payload
   }
 }
 

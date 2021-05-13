@@ -45,6 +45,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.pagination {
+  margin-top: 5px;
+}
 </style>

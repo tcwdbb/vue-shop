@@ -7,7 +7,7 @@
       @close="closeDiglog"
     >
       <slot></slot>
-      <span slot="footer" class="dialog-footer">
+      <span v-if="isShowBtn" slot="footer" class="dialog-footer">
         <el-button @click="clickDialogVisible">取 消</el-button>
         <el-button type="primary" @click="clickSure">确 定</el-button>
       </span>
@@ -27,6 +27,11 @@ export default {
       type: Boolean,
       default: false,
     },
+    //判断是否需要显示底部按钮
+    isShowBtn: {
+      type: Boolean,
+      default: true
+    }
   },
   methods: {
     //点击向父组件发送事件隐藏对话框

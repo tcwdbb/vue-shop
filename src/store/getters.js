@@ -50,5 +50,17 @@ export default {
   //获取商品总条数
   getterGoodsTotal(state) {
     return state.goodsTotal;
+  },
+  //获取订单列表数据
+  getterOrderList(state) {
+    return state.orderList;
+  },
+  //获取订单总条数
+  getterOrderTotal(state) {
+    return state.orderTotal;
+  },
+  //获取订单查询参数
+  getterOrderQueryInfo(state) {
+    return state.orderQueryInfo;
   }
 }

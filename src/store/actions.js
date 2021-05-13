@@ -1,6 +1,7 @@
 import { getRoleList } from 'network/role.js'
 import { getGoodsCategoryList } from 'network/goods/categories.js'
 import { getGoodsList } from '../network/goods/goods';
+import { getOrderData } from 'network/orders.js'
 export default {
   //获取角色列表
     async getRoleList({commit}) {
@@ -26,5 +27,14 @@ export default {
       }
       commit('setGoodsTotal',res.data.total);
       commit('setGoodsList',res.data.goods);
+    },
+    //获取订单列表数据
+    async getOrdersList({ state, commit }) {
+      const res = await getOrderData(state.orderQueryInfo);
+      if(res.meta.status !== 200) {
+        return this.$message.error('获取订单列表失败')
+      }
+      commit('setOrderList',res.data.goods);
+      commit('setOrderTotal',res.data.total);
     }
 }

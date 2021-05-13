@@ -48,7 +48,17 @@ const state = {
   //商品列表数据
   goodsList: [],
   //商品数据总条数
-  goodsTotal: 0
+  goodsTotal: 0,
+  //订单列表查询参数
+  orderQueryInfo: {
+    query: '',
+    pagenum: 1,
+    pagesize: 5
+  },
+  //订单列表数据
+  orderList: [],
+  //订单列表总条数
+  orderTotal: 0
 }
 
 export default new Vuex.Store({
